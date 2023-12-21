@@ -5,6 +5,7 @@ let todoItem = require("./todoItems.json");
 app.use(cors());
 app.use(express.json());
 
+console.log(todoItem, "todo item.....");
 app.get("/api/todo", (req, res) => {
   res.json(todoItem);
 });
@@ -18,8 +19,6 @@ app.post("/api/todo", (req, res) => {
     return res.json(todoItem);
   }
   if ("id" in req.body) {
-   
-
     todoItem = todoItem.map((item) => {
       console.log(item.id);
       if (item.id === id) {
@@ -50,7 +49,7 @@ app.put("/api/todo", (req, res) => {
   todoItem.forEach((item) => {
     if (item.id === id) {
       item.todoItem = newData;
-      item.isCompleted? false:false
+      item.isCompleted ? false : false;
       found = true;
     }
   });

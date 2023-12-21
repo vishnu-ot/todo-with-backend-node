@@ -13,11 +13,14 @@ export const DataContextProvider = ({ children }) => {
   // ]);
 
   const fetchData = async () => {
-    let result = await axios("http://localhost:3000/api/todo");
+    let result = await axios(
+      "https://todo-with-backend-node-8xvt-backenddddd.vercel.app/api/todo"
+    );
 
     setTodoItems(result.data);
   };
- 
+  console.log(todoItems, "todo itemsssss");
+
   const addTodoHandler = async () => {
     // let newItem = { id: Date.now(), todoItem: inputData, isCompleted: false };
 
@@ -25,7 +28,7 @@ export const DataContextProvider = ({ children }) => {
       alert("Please enter a valid todo item");
       return;
     }
-    let result = await axios("http://localhost:3000/api/todo", {
+    let result = await axios("https://todo-with-backend-node-8xvt-backenddddd.vercel.app/api/todo", {
       method: "POST",
       data: {
         newTodoItem: inputData,

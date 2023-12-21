@@ -9,10 +9,9 @@ import { DataContext } from "./context/DataContext";
 
 function App() {
   const { todoItems } = useContext(DataContext);
-  console.log(todoItems, "vishn")
+
   return (
     <div className="App-main">
-   
       <div className="todoListOuter">
         <InputItem />
 

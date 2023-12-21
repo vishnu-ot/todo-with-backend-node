@@ -19,7 +19,7 @@ function TodoList({ item }) {
     //   }
     //   return item;
     // });
-    let result = await axios("http://localhost:3000/api/todo", {
+    let result = await axios("https://todo-with-backend-node-8xvt-backenddddd.vercel.app/api/todo", {
       method: "POST",
       data: {
         id: id,
@@ -34,7 +34,7 @@ function TodoList({ item }) {
       return;
     }
 
-    let result = await axios("http://localhost:3000/api/todo", {
+    let result = await axios("https://todo-with-backend-node-8xvt-backenddddd.vercel.app/api/todo", {
       method: "PUT",
       data: {
         id: id,
@@ -57,7 +57,7 @@ function TodoList({ item }) {
   };
 
   const deleteHandler = async (id) => {
-    let result = await axios("http://localhost:3000/api/todo", {
+    let result = await axios("https://todo-with-backend-node-8xvt-backenddddd.vercel.app/api/todo", {
       method: "DELETE",
       data: {
         itemId: id,
