@@ -30,7 +30,7 @@ app.post("/api/todo", (req, res) => {
 
     return res.json(todoItem);
   }
-  res.json("inavalid parameters");
+  res.status(404).json("inavalid parameters");
 });
 
 app.delete("/api/todo", (req, res) => {
@@ -41,7 +41,7 @@ app.delete("/api/todo", (req, res) => {
     todoItem.splice(itemIndex, 1);
     return res.json(todoItem);
   }
-  res.json("invalid id");
+  res.status(404).json("invalid id");
 });
 
 app.put("/api/todo", (req, res) => {
