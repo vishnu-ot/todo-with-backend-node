@@ -1,0 +1,78 @@
+.todo-item {
+  display: flex;
+  border-bottom: 1px dashed rgba(143, 168, 193, 0.3);
+  margin-top: 35px;
+  align-items: center;
+  padding: 0 50px;
+  padding-bottom: 30px;
+}
+
+.todolist {
+  /* margin-left: 50px; */
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #8fa8c1;
+  word-break: break-all;
+  width: 350px;
+  cursor: pointer;
+  /* text-decoration: line-through; */
+}
+.completed {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #8fa8c1;
+  word-break: break-all;
+  width: 350px;
+  cursor: pointer;
+  text-decoration: line-through;
+}
+
+.edit-image {
+  margin-left: 20px;
+  cursor: pointer;
+}
+.delete-image {
+  margin-left: 11px;
+  /* margin-right: 35px; */
+  cursor: pointer;
+}
+
+/* Edit div */
+
+.edit {
+  display: flex;
+  gap: 9px;
+}
+.edit input {
+  width: 234px;
+  height: 40px;
+  border: 1px solid rgba(143, 168, 193, 0.5);
+  border-radius: 4px;
+  outline: none;
+  background: #152431;
+  color: #8fa8c1;
+  padding: 0 12px;
+}
+
+.edit .save-button,
+.edit .cancel-button {
+  width: 75px;
+  height: 40px;
+  line-height: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  border: none;
+}
+.save-button {
+  background: #0c5488;
+  color: #8fa8c1;
+}
+
+.cancel-button {
+  background: #8fa8c1;
+  color: #0c5488;
+}
